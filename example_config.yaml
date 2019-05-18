@@ -1,6 +1,6 @@
 preprocess:
-  data_dir: /data/corpus/open_subtitles # Corpus directory
-  save_dir: data                        # Directory for saving generated data
+  data_dir: data                        # Corpus directory
+  save_dir: data2                       # Directory for saving generated data
   size: 30000                           # Size of the vocabulary
   max_len: 15                           # Max length of the inputs and outputs(0 for disabling max_len)
   normalize: True                       # Normalize the strings

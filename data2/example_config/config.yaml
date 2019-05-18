@@ -1,0 +1,5 @@
+data_dir: data
+max_len: 15
+normalize: true
+save_dir: data2/example_config
+size: 30000
