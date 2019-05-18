@@ -35,6 +35,19 @@ Preprocess the corpus text files before training.
 python preprocess.py --config <config_path>
 ```
 
+#### Common Errors
+- problem: `ImportError: ... /libomp.dylib image not found` 
+- solution: `brew install libomp`
+
+
+- problem: `TypeError: Class advice impossible in Python3.  Use the @implementer class decorator instead.`
+- solution: clone the apex repo directly: 
+```
+git clone https://www.github.com/nvidia/apex
+cd apex
+python setup.py install
+```
+
 #### Training
 Run this command to start training, change the argument values in your own need.
 ```
