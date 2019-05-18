@@ -1,42 +1,27 @@
-# pytorch-chatbot
-This is a pytorch seq2seq tutorial for [Formosa Speech Grand Challenge](https://fgc.stpi.narl.org.tw/activity/techai), which is modified from [pratical-pytorch seq2seq-translation-batched](https://github.com/spro/practical-pytorch/blob/master/seq2seq-translation/seq2seq-translation-batched.ipynb).  
-Here is the [tutorial](https://fgc.stpi.narl.org.tw/activity/videoDetail/4b1141305df38a7c015e194f22f8015b) in Chinese.
+# PyTorch Chatbot
+This is a simple chatbot based on seq2seq and implemented in PyTorch.
 
-## Requirement
+## Requirements
 * python 3.5+
 * pytorch 0.4.0+
 * tqdm
 * tensorboardX
 * apex(optional)
 
-## Get started
-#### Clone the repository
-```
-git clone https://github.com/ywk991112/pytorch-chatbot
-```
-
-#### Config
-Before running through all the process below, modify the config file first.
+#### Setup
+Clone the repository. 
 
 #### Corpus
-Corpus directory tree struture should be like...
+The dataset directory should look like this:
 ```
-<corpus_directory name>
+<data>
 ├── <train.txt>
 ├── <valid.txt>
 |       ⋮
 └── <test.txt>
 ```
 
-Take config file `example_config.yaml` as the example, the directory tree will be
-```
-/data/corpus/open_subtitles
-├── opensubtitles_train.txt
-├── opensubtitles_valid.txt
-└── opensubtitles_test.txt
-```
-
-In each corpus file, the input-output sequence pairs should be in the adjacent lines. For example, 
+Corpus files are text files with pairs of conversational exchanges. Each input-output pair is separated by a new line. For example:
 ```
 I'll see you next time.
 Sure. Bye.
@@ -45,7 +30,7 @@ Better than ever.
 ```
 
 #### Preprocessing
-The corpus text files should be preprocessed first.
+Preprocess the corpus text files before training.
 ```
 python preprocess.py --config <config_path>
 ```
